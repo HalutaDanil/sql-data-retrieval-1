@@ -1,6 +1,8 @@
-SELECT pizza_name
-FROM menu
+select pizza_name
+from menu
 
 intersect 
 
-select pizza_name from menu;
+select pizza_name 
+from menu 
+order by pizza_name desc;
