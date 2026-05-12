@@ -19,11 +19,29 @@ Advanced SQL focusing on JOIN operations and correlated subqueries. Working with
 
 ### ✨ Features
 
-| Exercise | Topic |\n|----------|-------|\n| ex00 | INNER JOIN |\n| ex01 | LEFT JOIN |\n| ex02 | RIGHT JOIN |\n| ex03 | FULL OUTER JOIN |\n| ex04 | CROSS JOIN |\n| ex05 | NATURAL JOIN |\n| ex06 | UNION and UNION ALL |\n| ex07 | INTERSECT and EXCEPT |\n| ex08 | Correlated subqueries |\n| ex09 | EXISTS |\n| ex10 | Subqueries in SELECT |
+| Exercise | Topic |
+|----------|-------|
+| ex00 | INNER JOIN |
+| ex01 | LEFT JOIN |
+| ex02 | RIGHT JOIN |
+| ex03 | FULL OUTER JOIN |
+| ex04 | CROSS JOIN |
+| ex05 | NATURAL JOIN |
+| ex06 | UNION and UNION ALL |
+| ex07 | INTERSECT and EXCEPT |
+| ex08 | Correlated subqueries |
+| ex09 | EXISTS |
+| ex10 | Subqueries in SELECT |
 
 ### 🚀 Quick Start
 
-```sql\n-- People who visited pizzerias but didn't order\nSELECT DISTINCT p.name\nFROM person p\nWHERE p.id IN (SELECT person_id FROM person_visits)\nAND p.id NOT IN (SELECT person_id FROM person_order);\n```
+```sql
+-- People who visited pizzerias but didn't order
+SELECT DISTINCT p.name
+FROM person p
+WHERE p.id IN (SELECT person_id FROM person_visits)
+AND p.id NOT IN (SELECT person_id FROM person_order);
+```
 
 ---
 
@@ -42,11 +60,29 @@ Advanced SQL focusing on JOIN operations and correlated subqueries. Working with
 
 ### ✨ Возможности
 
-| Задача | Тема |\n|--------|------|\n| ex00 | INNER JOIN |\n| ex01 | LEFT JOIN |\n| ex02 | RIGHT JOIN |\n| ex03 | FULL OUTER JOIN |\n| ex04 | CROSS JOIN |\n| ex05 | NATURAL JOIN |\n| ex06 | UNION и UNION ALL |\n| ex07 | INTERSECT и EXCEPT |\n| ex08 | Коррелированные подзапросы |\n| ex09 | EXISTS |\n| ex10 | Подзапросы в SELECT |
+| Задача | Тема |
+|--------|------|
+| ex00 | INNER JOIN |
+| ex01 | LEFT JOIN |
+| ex02 | RIGHT JOIN |
+| ex03 | FULL OUTER JOIN |
+| ex04 | CROSS JOIN |
+| ex05 | NATURAL JOIN |
+| ex06 | UNION и UNION ALL |
+| ex07 | INTERSECT и EXCEPT |
+| ex08 | Коррелированные подзапросы |
+| ex09 | EXISTS |
+| ex10 | Подзапросы в SELECT |
 
 ### 🚀 Быстрый старт
 
-```sql\n-- Люди, посещавшие пиццерии, но не делавшие заказов\nSELECT DISTINCT p.name\nFROM person p\nWHERE p.id IN (SELECT person_id FROM person_visits)\nAND p.id NOT IN (SELECT person_id FROM person_order);\n```
+```sql
+-- Люди, посещавшие пиццерии, но не делавшие заказов
+SELECT DISTINCT p.name
+FROM person p
+WHERE p.id IN (SELECT person_id FROM person_visits)
+AND p.id NOT IN (SELECT person_id FROM person_order);
+```
 
 ---
 
