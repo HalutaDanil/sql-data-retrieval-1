@@ -33,15 +33,6 @@ Advanced SQL focusing on JOIN operations and correlated subqueries. Working with
 | ex09 | EXISTS |
 | ex10 | Subqueries in SELECT |
 
-### 🚀 Quick Start
-
-```sql
--- People who visited pizzerias but didn't order
-SELECT DISTINCT p.name
-FROM person p
-WHERE p.id IN (SELECT person_id FROM person_visits)
-AND p.id NOT IN (SELECT person_id FROM person_order);
-```
 
 ---
 
@@ -74,15 +65,6 @@ AND p.id NOT IN (SELECT person_id FROM person_order);
 | ex09 | EXISTS |
 | ex10 | Подзапросы в SELECT |
 
-### 🚀 Быстрый старт
-
-```sql
--- Люди, посещавшие пиццерии, но не делавшие заказов
-SELECT DISTINCT p.name
-FROM person p
-WHERE p.id IN (SELECT person_id FROM person_visits)
-AND p.id NOT IN (SELECT person_id FROM person_order);
-```
 
 ---
 
